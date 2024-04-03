@@ -1,0 +1,22 @@
+www.revshells.com
+sudo -su
+suid-bit: egy meghatalmazast hoz letre, fel lehet hasznalni a jogait
+nem mindig lehet kihasznalni az elerheto suid-bit-es fajlokat 
+find parancs: find / -perm -u=s 2>/dev/null
+gtfobins: az osszes kihasznalhato fajlokat megkeresheti
+demoparancsok listaja
+gdp: elso sort el lehet hagyni
+"./" reszet a masodik kodnak elhagyjuk
+sudo -l : milyen jogunk van
+ha van ssh a gepen, lehet egy student-e valni, egy ssh kulcson keresztul (perzisztencia, ssh kulcskeszites ssh-keygen)
+/etc/passwd meg lehet nezni a tartalmat(cat), es a jogosultsagot (ls -l)
+jogok vegen +: egy felhasznalonak specialis joga van, ezt megnezni getfacl getf(ile)a(ccess)c(ontrol)l(ist)
+passwd: jelszavak helye, a fajlban 2 fajl van /etc/passwd (- mar csak informaciok mappaja), tenyleges jelszavak /etc/shadow fajlban vannak
+hash jelszavak: 3 reszbol allnak: a tipus, hany koros, show-ugyanolyan jelszo eseten, $ jeltol a tenyleges jelszo
+feltores: john (the ripper) -nem csak ezt szoktak hasznalni, a hashcat-et szoktak, csak bonyolultabb
+ha jelszoval ellathato, kezelheto a john-nal
+mindenre jo, semmire sem a legjobb
+john jelszo --wordlist=/usr/share/wordlists/rockyou.txt --format=crypt(alapesetben john megprobalja a jelszo hash-jet megismerni, ebben az esetben nem mukodik, a format akkor kell, ha 'y' tipusu a jelszo)
+python library hijacking
+keszitunk egy rosszindulatu python kodot
+echo "import pty;pty.spawn('bin/bash')" > random.py
