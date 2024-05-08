@@ -1,0 +1,13 @@
+foxyproxy
+iranyitja a beerkezo requesteket, rairanyitjuk a burpsuite-ra (localhost:8080)
+burpsuite
+pc ->(request) burp ->(m. req) webserver
+meg tudja valtoztatni a kereseket, es a valaszokat
+legfontosabb a proxy tab
+intercept on - kereseim atmennek a burp-on
+send to repeater: kérést kézzel módosíthatunk, finomhangolásra
+send to intruder: brute force, sniper: ugyanazt a szot irja mindegyik mezore, battering ram: az osszes szot megprobalja mindegyik szonal
+add §
+intruder -> payloads -> payload settings -> paste -> start attack
+response byte hosszabol ra lehet jonni, melyik a helyes jelszo
+ez nem működik js prompt loginnal
