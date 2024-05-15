@@ -1,0 +1,24 @@
+wpscan detection mode
+Passziv olyan dolgok, amiket mi latnank a weboldalon
+Agressziv belemegy az ismert wp mappakba, eszrevehetok
+Mixed erdekes dolog eseten atvalt agresszivba, eredetileg passziv
+Random user agent
+Http auth Basic authentication
+T szalak szama
+Throttle ket keres kozott mennyi ido teljen el, valodi ember szimulalasa
+Tls check regi tanusitvanyok eseten
+Cookie cookie lopas, hasznalhato egy admin cookie
+Force akkor is vizsgalja, ha nem detektalja wp oldalnak
+Api token tobb informacio az oldalrolWp content ha atnevezik az almappakat
+E [option]
+U
+Ap all plugin
+Plugin detection mode
+U felhasznalolistaLogin uri ha nem talalhato az oldalon,
+Mit kell meg beirni a blog oldalara
+Stealthy elrejtozes ami a legjobban lehetseges
+Wpscan téma pluginok userek (verziok)jelszo a talalt use
+Nem kap jelszot 5000-ig akkor nem brute force-ot kell alkalmazniNehezebb php fajlokat rendezzunk, barmilyen blog feltoresehez
+Nehez wp-hez
+wp admin shell upload
+msfconsole -q csak listeneroptionsusername = adminrun

